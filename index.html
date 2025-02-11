@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            position: relative; /* Required for ScrollSpy */
+        }
+        .carousel img {
+            height: 500px;
+            object-fit: cover;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+       #destinations .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #destinations .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        #destinations .card-body .btn {
+            margin-top: auto;
+        }
+
+        #destinations .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarScrollSpy" data-bs-offset="70" tabindex="0">
+    <!-- Navbar -->
+    <nav id="navbarScrollSpy" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Explore India</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://github.com/irfan95sayyad/Travel/blob/main/Taj-Mahal.jpg?raw=true" class="d-block w-100" alt="Taj Mahal">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="color: #f8f9fa; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Taj Mahal</h5>
+                    <p style="color: #f8f9fa; text-shadow: 4px 4px 7px rgba(11, 11, 11, 0.7);">
+                        The epitome of love and an iconic Indian monument.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media2.thrillophilia.com/images/photos/000/171/534/original/1568887641_shutterstock_1013834887.jpg?w=753&h=450&dpr=1.5" class="d-block w-100" alt="Kerala">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Kerala</h5>
+                    <p>Explore the serene backwaters and lush greenery.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-adiyogi-shiva-statue-coimbatore-tamil-nadu-city-hero?qlt=82&ts=1726674592187" class="d-block w-100" alt="Tamil nadu">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tamil nadu</h5>
+                    <p>The fourth largest state of India</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.istockphoto.com/id/914636482/photo/ooty-countryside-tamil-nadu-india.jpg?s=612x612&w=0&k=20&c=nXQbE1lZZj-Kku7I4mE4FcQJl8LzZCwQhaikOd0vJKw=" class="d-block w-100" alt="Ooty">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ooty</h5>
+                    <p>Explore the hill station</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">We help you explore the wonders of India, from historical landmarks to natural beauty. Join us to experience the cultural richness and scenic landscapes of India.</p>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <div class="container">
+            <h2 class="text-center">Destinations</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://lp-cms-production.imgix.net/2020-11/shutterstockRF_547110784.jpg?fit=crop&w=1280&auto=format&q=75" class="card-img-top" alt="TajMahal">
+                        <div class="card-body">
+                            <h5 class="card-title">Taj Mahal</h5>
+                            <p class="card-text">2 nights and 3 days in Agra.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tajModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPzpa4SjsTQ5-3fgKQmIOdTv3fg-DUmYvmw&s" alt="Kerala">
+                        <div class="card-body">
+                            <h5 class="card-title">Kerala</h5>
+                            <p class="card-text">5 nights and 6 days in the backwaters.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#keralaModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_sK_LEuLg-nUbj_ds9_6_ctKVs2CVsszBw&s" class="card-img-top" alt="Rajasthan">
+                        <div class="card-body">
+                            <h5 class="card-title">Rajasthan</h5>
+                            <p class="card-text">4 nights and 5 days in Jaipur and Udaipur.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rajasthanModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://www.shutterstock.com/image-photo/beautiful-kookal-village-kodaikanal-tamil-260nw-2361028113.jpg" class="card-img-top" alt="Tamil nadu">
+                        <div class="card-body">
+                            <h5 class="card-title">Tamil nadu</h5>
+                            <p class="card-text">6 nights and 7 days.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tamilnaduModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/914636482/photo/ooty-countryside-tamil-nadu-india.jpg?s=612x612&w=0&k=20&c=nXQbE1lZZj-Kku7I4mE4FcQJl8LzZCwQhaikOd0vJKw=" class="card-img-top" alt="Ooty">
+                        <div class="card-body">
+                            <h5 class="card-title">Ooty</h5>
+                            <p class="card-text">8 nights and 9 days</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ootyModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- New destination card beside Ooty -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLkutmNxA8ktnX0by8kPo1yK1SPRvDs1-0ww&s" class="card-img-top" alt="Kodaikanal">
+                        <div class="card-body">
+                            <h5 class="card-title">Kodaikanal</h5>
+                            <p class="card-text">7 nights and 8 days in the hill station.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kodaikanalModal">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2
+             <div class="col-md-6">
+                    <!-- Contact Form -->
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal fade" id="tajModal" tabindex="-1" aria-labelledby="tajModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tajModalLabel">Taj Mahal Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Experience the breathtaking beauty of the Taj Mahal, explore Agra Fort, and shop for local handicrafts.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="keralaModal" tabindex="-1" aria-labelledby="keralaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/587/946/340/india-asia-forest-river-wallpaper-preview.jpg" class="img-fluid rounded">
+                    <h5 class="modal-title" id="keralaModalLabel">Kerala Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Cruise through the tranquil backwaters, visit spice plantations, and relax on pristine beaches.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="rajasthanModal" tabindex="-1" aria-labelledby="rajasthanModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rajasthanModalLabel">Rajasthan Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Visit the royal palaces of Jaipur, experience the desert safari in Jaisalmer, and enjoy the lakes of Udaipur.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tamilnaduModal" tabindex="-1" aria-labelledby="tamilnaduModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tamilnaduModalLabel">Tamil nadu Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Exploring the mountains, visit famous temples, and beaches.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ootyModal" tabindex="-1" aria-labelledby="ootyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ootyModalLabel">Ooty Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Visit Botanical Garden, Tea Museum, Mudumalai National Park.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="kodaikanalModal" tabindex="-1" aria-labelledby="kodaikanalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kodaikanalModalLabel">Kodaikanal Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Explore the beautiful hill station, visit Berijam Lake, and take a boat ride.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>If you have any questions, feel free to reach out to us. We are happy to assist you in planning your perfect trip across India.</p>
+            <p>Email us at <a href="mailto:info@exploreindia.com" class="text-light">info@exploreindia.com</a></p>
+            <p>Call us at +91 9876543210</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
